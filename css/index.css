@@ -1,0 +1,52 @@
+:root {
+    --blurple: #7289DA;
+    --greyple: #99AAB5;
+    --dark: #2C2F33;
+    --dark-dark: #23272A;
+}
+
+body {
+    background-color: var(--dark);
+}
+
+.banner {
+    height: calc(150px + 20vw);
+    width: 100vw;
+    background: linear-gradient(180deg, var(--blurple) 0%, #5364a3 100%);
+    position: absolute;
+    left: 0;
+    transform: skewY(-5deg);
+    transform-origin: top left;
+}
+
+.banner-break {
+    height: 300px;
+}
+
+.banner .container {
+    transform: skewY(5deg);
+    transform-origin: top left;
+}
+
+.discord-logo {
+    width: 100px;
+    height: 100px;
+}
+
+.center {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.invite-logo {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+}
+
+a {
+    cursor: pointer;
+}
