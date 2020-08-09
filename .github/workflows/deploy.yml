@@ -25,5 +25,5 @@ jobs:
           envs: GITHUB_USERNAME, GITHUB_TOKEN
           script: |
             docker login docker.pkg.github.com -u $GITHUB_USERNAME -p $GITHUB_TOKEN
-            docker pull docker.pkg.github.com/FiMDiscord/fimdiscord.net/latest:latest
-            docker run -dit -p 80:80 -p 443:443 docker.pkg.github.com/FiMDiscord/fimdiscord.net/latest:latest --name fimdiscord
+            docker pull docker.pkg.github.com/fimdiscord/fimdiscord.net/latest:latest
+            docker run -dit -p 80:80 -p 443:443 docker.pkg.github.com/fimdiscord/fimdiscord.net/latest:latest --name fimdiscord
