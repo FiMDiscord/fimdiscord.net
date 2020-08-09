@@ -10,5 +10,5 @@ jobs:
       with:
         name: FiMDiscord/fimdiscord.net/latest
         username: ${{ github.actor }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
+        password: ${{ github.token }}
         registry: docker.pkg.github.com
