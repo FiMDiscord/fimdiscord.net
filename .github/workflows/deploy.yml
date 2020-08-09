@@ -24,7 +24,7 @@ jobs:
           port: 22
           envs: GITHUB_USERNAME, GITHUB_TOKEN
           script: |
-            docker stop fimdiscord
+            docker container inspect fimdiscord || docker stop fimdiscord
             docker login docker.pkg.github.com -u $GITHUB_USERNAME -p $GITHUB_TOKEN
             docker pull docker.pkg.github.com/FiMDiscord/fimdiscord.net/latest:latest
             docker run -dit -p 80:80 -p 443:443 docker.pkg.github.com/FiMDiscord/fimdiscord.net/latest:latest --name fimdiscord
