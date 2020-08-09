@@ -5,13 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: Publish to Registry
-        uses: elgohr/Publish-Docker-Github-Action@master
-        with:
-          name: FiMDiscord/fimdiscord.net/latest
-          username: ${{ github.actor }}
-          password: ${{ github.token }}
-          registry: docker.pkg.github.com
       - name: DigitalOcean
         uses: appleboy/ssh-action@master
         env:
@@ -24,6 +17,6 @@ jobs:
           port: 22
           envs: GITHUB_USERNAME, GITHUB_TOKEN
           script: |
-            docker login docker.pkg.github.com -u $GITHUB_USERNAME -p $GITHUB_TOKEN
-            docker pull docker.pkg.github.com/fimdiscord/fimdiscord.net/latest:latest
-            docker run -dit docker.pkg.github.com/fimdiscord/fimdiscord.net/latest:latest --name fimdiscord
+            cd /home/user-data/www/default
+            git pull --force
+            npm i
