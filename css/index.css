@@ -1,52 +1,69 @@
 :root {
-    --blurple: #7289DA;
-    --greyple: #99AAB5;
-    --dark: #2C2F33;
-    --dark-dark: #23272A;
+  --blurple: #7289da;
+  --greyple: #99aab5;
+  --dark: #2c2f33;
+  --dark-dark: #23272a;
 }
 
 body {
-    background-color: var(--dark);
+  background-color: var(--dark);
 }
 
 .banner {
-    height: calc(150px + 20vw);
-    width: 100vw;
-    background: linear-gradient(180deg, var(--blurple) 0%, #5364a3 100%);
-    position: absolute;
-    left: 0;
-    transform: skewY(-5deg);
-    transform-origin: top left;
+  height: calc(150px + 20vw);
+  width: 100vw;
+  background: linear-gradient(180deg, var(--blurple) 0%, #5364a3 100%);
+  position: absolute;
+  left: 0;
+  transform: skewY(-5deg);
+  transform-origin: top left;
+  box-shadow: 0px 0px 10px 5px var(--dark-dark);
 }
 
 .banner-break {
-    height: 300px;
+  height: 300px;
 }
 
 .banner .container {
-    transform: skewY(5deg);
-    transform-origin: top left;
+  transform: skewY(5deg);
+  transform-origin: top left;
 }
 
 .discord-logo {
-    width: 100px;
-    height: 100px;
+  width: 100px;
+  height: 100px;
+  filter: drop-shadow(0px 0px 4px var(--dark));
+  transition: ease-in-out 0.5s;
+}
+.discord-logo:hover {
+  width: 115px;
+  height: 115px;
+  filter: drop-shadow(0px 0px 8px var(--dark));
 }
 
 .center {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-items: center;
 }
 
 .invite-logo {
-    display: flex;
-    flex-direction: column;
-    color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: font-size ease-in-out 0.5s;
+}
+
+.invite-logo:hover {
+  font-size: 1.1rem;
 }
 
 a {
-    cursor: pointer;
+  cursor: pointer;
+}
+a:hover {
+  text-decoration: none;
 }
